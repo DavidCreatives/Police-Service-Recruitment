@@ -1,5 +1,10 @@
 body{
-  background-color:rgb(2, 2, 159);
+  background-image: url(https://nairobilawmonthly.com/wp-content/uploads/2024/01/police-kenya-1.jpeg);
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(2px);
+  border: 2px solid white;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,13 +28,14 @@ body{
 .LoginContainer h1{
   text-align: center;
   margin-bottom: 20px;
-  font-family: Arial, sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .LoginContainer p{
   text-align: center;
   margin-top: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
 }
 
 .LoginForm{
