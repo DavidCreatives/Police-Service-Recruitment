@@ -18,6 +18,12 @@ body{
   height: 20%;
   position: static;
 }
+.Navigation img{
+  margin-right: 10px;
+  position: absolute;
+  left: 20px;
+}
+
 .Navigation a, button{
   padding: 10px;
   margin: 5px;
@@ -108,6 +114,7 @@ body{
   width: 100%;
   height: 80%;
   flex-wrap: wrap;
+  margin: 10px;
 }
 #EmergencyRes{
   background-image: url(https://plus.unsplash.com/premium_photo-1742418155763-a82f36a35774?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -139,30 +146,45 @@ body{
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 300px;
-  gap: 0;
-  width: 200px;
+  height: 70%;
+  width: 250px;
   transition: all 1s ease;
+  overflow: hidden;
+  border-block-start: 10px solid gold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .item:hover{
   transform: translateX(20px);
-  flex-grow: 1;
-  backdrop-filter: blur(50px);
-  
+  flex-grow: .6;
+  background-blend-mode: lighten;
 }
 
 .item p{
-  font-size: 18px;
+  font-size: 25px;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all .5s ease;
+
 }
 .item:hover p{
   opacity: 1;
 }
 
+.item h3{
+  color: gold;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.Footer p{
+  color: white;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  height: 100px;
+}
 
 @media screen and (max-width: 768px) {
   .item{
