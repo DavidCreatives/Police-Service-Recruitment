@@ -1,9 +1,19 @@
 // Create User constructor:
-class userConstructor{
+class userDatabase{
   constructor(){
     this.users = {};
   };
 };
 
-const newUser = new userConstructor();
-console.log(newUser.users);
+class userConstructor{
+  constructor(username, password){
+    this.username = username;
+    this.password = password;
+  }
+}
+
+const newUser = new userConstructor("David", "David1234")
+
+const newDatabase = new userDatabase();
+console.log(newDatabase.users);
+console.log(newUser);
