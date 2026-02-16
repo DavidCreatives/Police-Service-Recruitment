@@ -280,6 +280,21 @@ body{
     bottom: 0;
     margin-top: auto;
   }
+
+  .MainBody{
+    flex-flow: column;
+    height: fit-content;
+    width: fit-content;
+    padding: 50px;
+  }
+  .RegistrationSection{
+    width:fit-content;
+    padding: 5%;
+  }
+  .RegistrationForm{
+    width: 300px;
+  }
 }  
+
 
 
