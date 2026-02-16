@@ -2,7 +2,7 @@
 A website for aspiring men and women of service to the Republic of Kenya under arms and details on the defense forces
 
 ## Tests ##
-1. ### Test 1: Create User Constructor  
+1. ### Test 1: Create User Database Constructor  
     **Date && time:** 8.23AM 16/02/2026
     **Status:** ✅Passed 
     **Code changes:** Creation of `userDatabase()`
@@ -11,3 +11,8 @@ A website for aspiring men and women of service to the Republic of Kenya under a
     **Date && time:** 3.31PM 16/02/2026
     **Status:** ✅Passed
     **Code changes:** Creation of `userConstructor()`
+
+3. ### Test 3: Create fucntion to handle user sign ups
+    **Date && time:** 3.46PM 16/02/2026
+    **Status:** ✅Passed
+    **Code changes:** Creation of `handleSignUp()` function.

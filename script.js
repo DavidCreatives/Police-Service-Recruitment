@@ -21,10 +21,11 @@ function handleSignUp(){
   const passwordValue = passwordInput.value;
   const passwordConfirmValue = passwordConfirmInput.value;
 
+  console.log(nameVal, passwordValue, passwordConfirmValue)
 }
 
 const newUser = new userConstructor("David", "David1234")
 
-const newDatabase = new userDatabase();
-console.log(newDatabase.users);
-console.log(newUser);
+// const newDatabase = new userDatabase();
+// console.log(newDatabase.users);
+// console.log(newUser);
