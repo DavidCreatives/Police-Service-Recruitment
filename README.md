@@ -1,2 +1,13 @@
 # defense-recruitment
 A website for aspiring men and women of service to the Republic of Kenya under arms and details on the defense forces
+
+## Tests ##
+1. ### Test 1: Create User Constructor  
+    **Date && time:** 8.23AM 16/02/2026
+    **Status:** ✅Passed 
+    **Code changes:** Creation of `userDatabase()`
+
+2. ### Test 2: Create User Constructor  
+    **Date && time:** 3.31PM 16/02/2026
+    **Status:** ✅Passed
+    **Code changes:** Creation of `userConstructor()`
