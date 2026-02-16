@@ -149,3 +149,19 @@ a:hover{
   font-family: Arial, sans-serif;
   font-size: 25px;
 }
+
+@media screen and (max-width: 768px) {
+  .LoginForm{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .LoginContainer{
+    flex-direction: row;
+    width: 100%;
+    max-height: fit-content;
+    margin: 50px;
+    display: block;
+  }
+  
+}  
+
