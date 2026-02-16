@@ -88,6 +88,23 @@ function handleLogin(){
   }
 }
 
+function handleRegister(){
+  const fullname = document.getElementById('fullname').value
+  const email = document.getElementById('email').value
+  const phoneNUm = document.getElementById('phone').value
+  const heightCM = document.getElementById('height').value
+  const idNUm = document.getElementById('idnumber').value
+  const homeAddress = document.getElementById('homeaddress').value
+  
+  if(!fullname || !email || !phoneNUm || !idNUm || !homeAddress){
+    alert("Please fill in all required fields")
+    return;
+  }
+  
+  alert("Application successful✅")
+
+  document.querySelector('.RegistrationForm').reset()
+}
   
 
 // const newDatabase = new userDatabase();

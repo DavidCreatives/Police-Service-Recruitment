@@ -63,8 +63,8 @@ body{
 }
 
 .Introduction p{
-  color: white;
-  background-color: rgba(65, 65, 63, 0.4);
+  color: yellow;
+  background-color: rgba(65, 65, 63, 0.6);
   font-size: 24px;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
@@ -74,7 +74,7 @@ body{
 
 /* About Section */
 .About{
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg-lZkG-wVTwr5ZQtKStoq60gE4DGP9KB8oQ&s);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6iZ-YTRefIVfP_uDBroglpHRR9exgK9KGw&s);
   background-size: cover;
   padding: 20px;
   height: 100%;
@@ -85,8 +85,8 @@ body{
 
 
 .About p{
-  color: rgb(255, 255, 255);
-  background-color: rgba(62, 62, 63, 0.4);
+  color: yellow;
+  background-color: rgba(62, 62, 63, 0.6);
   border-radius: 105px;
   padding: 20px;
   font-size: 24px;
@@ -201,16 +201,19 @@ body{
 }
 .RegistrationSection{
   background-color: white;
-  height: fit-content;
-  width: 50%;
+  height: 500px;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
-.RegistrationForm input, textarea{
+.RegistrationForm input, textarea, select{
   width: 80%;
   padding: 10px;
   margin: 5px;
@@ -247,6 +250,7 @@ body{
   height: 60%;
   width: 250px;
   
+  justify-self: flex-start;
   overflow: hidden;
   border-block-start: 10px solid gold;
   transition: all 1s ease;
@@ -295,6 +299,9 @@ body{
     width: 300px;
   }
 }  
+
+
+
 
 
 
