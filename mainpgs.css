@@ -20,7 +20,7 @@ body{
 }
 .Navigation img{
   margin-right: 10px;
-  position: absolute;
+  position: static;
   left: 20px;
 }
 
@@ -102,7 +102,8 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-grow: 1;
+  flex-grow: 0;
+  margin-top: auto;
 }
 
 /* Service Page */
@@ -254,7 +255,31 @@ body{
 }
 
 @media screen and (max-width: 768px) {
+  body{
+    flex-direction: column;
+    height: auto;
+  }
   .item{
     width: 90%;
   }
+  .Navigation a{
+    font-size:smaller ;
+    
+  }
+
+  .Navigation{
+    height: fit-content;
+    flex-direction: column;
+  }
+  .Selection{
+    height: fit-content;
+
+  }
+  .Footer{
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+  }
 }  
+
+
