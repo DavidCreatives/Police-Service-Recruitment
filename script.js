@@ -11,12 +11,14 @@ class userConstructor{
     this.password = password;
   }
 };
-
+// DOM SignUp PAGE
 const nameInput = document.getElementById('username')
 const passwordInput = document.getElementById('password')
 const passwordConfirmInput = document.getElementById('confirmPassword')
 const availableMessage = document.getElementById('available?')
-
+// DOM Login PAGE
+const usernameLogin = document.getElementById("usernameLogin")
+const passwordLogin = document.getElementById("passwordLogin")
 
 // Username validation within the system as the user types/in live time.
 document.getElementById("username").addEventListener("input", function(){
@@ -70,6 +72,23 @@ function handleSignUp(){
   
   // console.log(nameVal, passwordValue, passwordConfirmValue)
 };
+
+// Handling Login on user entry of data
+function handleLogin(){
+  const usernameLoginVal = usernameLogin.value
+  const passwordLoginVal = passwordLogin.value
+
+  const localPassReq = localStorage.getItem(usernameLoginVal)
+  if(passwordLoginVal === localPassReq){
+    // console.log('Successful')
+    // console.log(localPassReq)
+    window.open('./about.html', '_self')
+  }else{
+    alert("Enter correct username or password")
+  }
+}
+
+  
 
 // const newDatabase = new userDatabase();
 // console.log(newDatabase.users);
