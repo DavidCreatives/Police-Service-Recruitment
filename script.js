@@ -19,26 +19,30 @@ const availableMessage = document.getElementById('available?')
 // DOM Login PAGE
 const usernameLogin = document.getElementById("usernameLogin")
 const passwordLogin = document.getElementById("passwordLogin")
+const userLogged = document.getElementById('userLogged')
 
 // Username validation within the system as the user types/in live time.
-document.getElementById("username").addEventListener("input", function(){
-  const nameVal = nameInput.value;
+if(nameInput){ //Only run if on signup page
+  nameInput.addEventListener("input", function(){
+    const nameVal = nameInput.value;
 
-  if(nameVal.length < 3 || nameVal.length > 18){
-    availableMessage.innerHTML = `<p style="color: red; font-size: 18px;text-align: left; margin:0px">⭕ Username character length should be 3 to 18 characters</p>`
-    return;
-  }else{
-    availableMessage.innerHTML = ''
-    if(nameVal){
-      const nameCheck = localStorage.getItem(nameVal)
-      if(nameCheck){
-        availableMessage.innerHTML = `<p style="color: red; font-size: 18px;text-align: left; margin:0px">⭕ Username already exists. Enter another one</p>`
-      }else{
-        availableMessage.innerHTML =`<p style="color: green; font-size: 18px;text-align: left; margin:0px">✅Username available</p>`
+    if(nameVal.length < 3 || nameVal.length > 18){
+      availableMessage.innerHTML = `<p style="color: red; font-size: 18px;text-align: left; margin:0px">⭕ Username character length should be 3 to 18 characters</p>`
+      return;
+    }else{
+      availableMessage.innerHTML = ''
+      if(nameVal){
+        const nameCheck = localStorage.getItem(nameVal)
+        if(nameCheck){
+          availableMessage.innerHTML = `<p style="color: red; font-size: 18px;text-align: left; margin:0px">⭕ Username already exists. Enter another one</p>`
+        }else{
+          availableMessage.innerHTML =`<p style="color: green; font-size: 18px;text-align: left; margin:0px">✅Username available</p>`
+          }
         }
       }
-    }
-})
+    
+  })
+}
 
 // Carries out validation and data entry after use has called the function(inthis case bys use of the Submit button)
 function handleSignUp(){
@@ -58,7 +62,7 @@ function handleSignUp(){
       {if(passwordValue === passwordConfirmValue){
         const newUSer = new userConstructor(nameVal, passwordValue)
         localStorage.setItem(newUSer.username, newUSer.password)
-
+        alert("✅Successful signup. Now Login to access the website")
         
       }else{
         alert('Ensure the password and password confirmation are the same')
@@ -66,9 +70,9 @@ function handleSignUp(){
       }
     }
   }
-  nameVal = ''
-  passwordValue.value = ''
-  passwordConfirmValue.value = ''
+  nameInput.value = ''
+  passwordInput.value = ''
+  passwordConfirmInput.value = ''
   
   // console.log(nameVal, passwordValue, passwordConfirmValue)
 };
@@ -80,6 +84,8 @@ function handleLogin(){
 
   const localPassReq = localStorage.getItem(usernameLoginVal)
   if(passwordLoginVal === localPassReq){
+    // Store the username to display on other pages
+    localStorage.setItem('currentUser', usernameLoginVal)
     // console.log('Successful')
     // console.log(localPassReq)
     window.open('./about.html', '_self')
@@ -87,6 +93,17 @@ function handleLogin(){
     alert("Enter correct username or password")
   }
 }
+
+const allowedDoc = ["about.html", "services.html","register.html"]
+if(allowedDoc.some(page => window.location.pathname.includes(page))){
+  document.addEventListener("DOMContentLoaded", function(){
+    const loggedInUser = localStorage.getItem('currentUser')
+    if(loggedInUser && userLogged){
+      userLogged.innerHTML = `<h2>Welcome, ${loggedInUser} 🌠</h2>`
+    }
+  })
+}
+
 
 function handleRegister(){
   const fullname = document.getElementById('fullname').value
@@ -105,7 +122,7 @@ function handleRegister(){
 
   document.querySelector('.RegistrationForm').reset()
 }
-  
+
 
 // const newDatabase = new userDatabase();
 // console.log(newDatabase.users);

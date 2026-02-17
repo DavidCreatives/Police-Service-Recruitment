@@ -1,3 +1,4 @@
+/* All pages */
 body{
   background-color:rgb(2, 2, 159);
   display: flex;
@@ -47,6 +48,13 @@ body{
   padding: 10px;
   font-family: 'Times New Roman', Times, serif;
   padding-right: 25%;
+}
+
+.LoginStatus h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: gold;
+  border-radius: 100px;
+  padding: 10px;
 }
 
 /*Introduction*/
@@ -257,6 +265,7 @@ body{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 @media screen and (max-width: 768px) {
   body{
